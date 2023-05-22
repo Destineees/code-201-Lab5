@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
@@ -87,12 +88,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let sumOne = sum(testArray[0],testArray[1]);
+  let thirdNum = testArray[2];
+  let sumTwo = sum(sumOne[0], thirdNum);
+  let totalSum =testArray +' was passed in as an array of numbers, and ' + sumTwo[0]+' is their sum.';
 
+  return [sumTwo[0],totalSum];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
