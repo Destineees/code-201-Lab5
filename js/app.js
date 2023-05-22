@@ -56,11 +56,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sum1 = sum(a, b);
+  let sum2 = sum(sum1[0], c);
+  let thisSum =  a+' and '+b+' and '+c+' sum to '+sum2[0]+'.';
+
+  let prod1 = multiply(a,b);
+  let prod2 = multiply(prod1[0], c);
+  let totalProd = 'The product of '+a+' and '+b+' and '+c+' is '+prod2[0]+'.';
+  return[sum2[0], prod2[0],thisSum, totalProd];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+// eslint-disable-next-line no-undef
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
